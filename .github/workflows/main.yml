@@ -48,7 +48,7 @@ jobs:
 
       - name: update clone.json
         run: |
-          curl https://raw.githubusercontent.com/kimhyonh/CleanArchitecturekimhyonh/CleanArchitecture/template/main.py > main.py
+          curl https://raw.githubusercontent.com/kimhyonh/CleanArchitecture/template/main.py > main.py
           python3 main.py
 
       - name: Update gist with latest count
