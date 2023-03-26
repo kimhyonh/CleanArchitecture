@@ -1,6 +1,6 @@
 ﻿using Domain.Common;
 
-namespace Domain.Agregate.Models
+namespace Domain.ValueObjects
 {
     public class Temporature : ValueObject
     {
@@ -13,7 +13,7 @@ namespace Domain.Agregate.Models
 
         private Temporature(int celsius)
         {
-            this.Celsius = celsius;
+            Celsius = celsius;
         }
 
         public static Temporature CreateWithCelsius(int celsius)

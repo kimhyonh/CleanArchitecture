@@ -1,6 +1,7 @@
 using Domain;
 using Infrastructure;
-using System.Reflection;
+using Api.Configurations.Filters;
+using Microsoft.AspNetCore.HttpLogging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionHandlerFilter)));
+
+builder.Services.AddHttpLogging(options => options.LoggingFields = HttpLoggingFields.All);
+
 var app = builder.Build();
+
+app.UseHttpLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

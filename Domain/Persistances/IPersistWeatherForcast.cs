@@ -1,7 +1,7 @@
-﻿using Domain.Common.Interfaces;
-using Domain.Models;
+﻿using Domain.Aggregates;
+using Domain.Common.Interfaces;
 
-namespace Domain.Agregate.Persistances;
+namespace Domain.Persistances;
 
 public interface IPersistWeatherForcast : IRepository<WeatherForecast>
 {

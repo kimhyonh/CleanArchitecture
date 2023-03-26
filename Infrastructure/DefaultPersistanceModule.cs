@@ -1,10 +1,10 @@
-﻿using Domain.Agregate.Persistances;
-using Infrastructure.Persistances;
+﻿using Domain.Persistances;
 using Microsoft.Extensions.DependencyInjection;
+using Persistance.Repositories;
 
 namespace Infrastructure;
 
-public static class DefaultInfrastructureModule
+public static class DefaultPersistanceModule
 {
     public static void AddInfrastructureLayer(this IServiceCollection services)
     {

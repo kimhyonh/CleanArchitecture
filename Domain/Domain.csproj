@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Agregate\Events\" />
-    <Folder Include="Agregate\Handlers\" />
-    <Folder Include="Agregate\Specifications\" />
+    <Compile Remove="Agregate\**" />
+    <EmbeddedResource Remove="Agregate\**" />
+    <None Remove="Agregate\**" />
   </ItemGroup>
 
   <ItemGroup>

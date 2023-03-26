@@ -1,7 +1,7 @@
 using Api.Dtos;
 using Ardalis.GuardClauses;
 using AutoMapper;
-using Domain.Agregate.Persistances;
+using Domain.Persistances;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -25,8 +25,8 @@ namespace Api.Controllers
             _repo = Guard.Against.Null(repo, nameof(repo));
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet]
+        public IEnumerable<WeatherForecast> List()
         {
             _logger.LogInformation("Loading WeatherForcast...");
 

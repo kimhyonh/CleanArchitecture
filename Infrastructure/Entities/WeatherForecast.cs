@@ -1,4 +1,4 @@
-namespace Infrastructure.Persistances.Entities;
+namespace Persistance.Entities;
 
 public class WeatherForecast
 {
