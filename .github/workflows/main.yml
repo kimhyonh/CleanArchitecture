@@ -87,4 +87,4 @@ jobs:
       - name: Push
         uses: ad-m/github-push-action@master
         with:
-          repo: https://{{ secrets.SECRET_TOKEN }}@github.com/${{ github.actor }}/${{ github.repository }}.git
+          repo: https://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@github.com/${{ github.actor }}/${{ github.repository }}.git
